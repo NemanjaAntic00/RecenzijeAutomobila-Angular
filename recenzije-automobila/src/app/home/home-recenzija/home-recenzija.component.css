@@ -1,0 +1,22 @@
+.recenzija {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: min-content;
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Google Sans Text", Roboto, Arial, sans-serif;
+  transition: background-color 0.3s, transform 0.2s;
+  max-width: 630px;
+  max-height: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.recenzija:hover {
+  transform: rotate(10deg); /* Rotiraj karticu na hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.slika {
+  width: 200px;
+  height: 200px;
+}

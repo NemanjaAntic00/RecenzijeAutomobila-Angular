@@ -1,0 +1,49 @@
+<div class="Home">
+  <app-navbar></app-navbar>
+  <div class="Gore">
+    <app-gore
+      (obavestiH)="Recenzije($event)"
+      (obavestiHA)="Automobili($event)"
+    ></app-gore>
+  </div>
+
+  <nav role="tablist" class="Navbar">
+    <span
+      [attr.aria-selected]="selectedTab === 'recenzije' ? 'true' : 'false'"
+      class="Kategorija"
+      role="tab"
+      tabindex="0"
+      (click)="selectTab('recenzije')"
+      id="ucj-1-0-tab"
+      aria-controls="ucj-1-0-panel"
+    >
+      <h4 class="naslov">Recenzije</h4>
+    </span>
+    <span
+      [attr.aria-selected]="selectedTab === 'automobili' ? 'true' : 'false'"
+      class="Kategorija"
+      role="tab"
+      tabindex="0"
+      (click)="selectTab('automobili')"
+      id="ucj-1-1-tab"
+      aria-controls="ucj-1-1-panel"
+    >
+      <h4 class="naslov">Automobili</h4>
+    </span>
+  </nav>
+  <app-home-automobili
+    (prikaziFormuu)="prikaziFormu($event)"
+    *ngIf="automobili"
+    [automobili]="automobilii"
+  ></app-home-automobili>
+  <app-home-recenzije
+    *ngIf="recenzije"
+    [recenzije]="recenzijee"
+  ></app-home-recenzije>
+  <div class="modal" *ngIf="isModalOpen" [@fadeAndRotate]="animationState">
+    <app-forma-detalji-auta
+      (zatvoriFormu)="zatvoriFormu()"
+      [auto]="auto"
+    ></app-forma-detalji-auta>
+  </div>
+</div>

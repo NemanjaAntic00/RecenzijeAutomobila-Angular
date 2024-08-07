@@ -1,0 +1,6 @@
+.car-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px; /* Razmak između kartica */
+  width: 81.4vw;
+}

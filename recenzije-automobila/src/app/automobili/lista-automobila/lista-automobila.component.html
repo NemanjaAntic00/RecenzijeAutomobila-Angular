@@ -1,0 +1,7 @@
+<div class="car-list">
+  <app-automobil
+    (prikaziFormu)="prikaziFormu($event)"
+    *ngFor="let car of cars"
+    [car]="car"
+  ></app-automobil>
+</div>

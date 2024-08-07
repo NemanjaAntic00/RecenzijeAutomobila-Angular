@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.GoreDiv {
+  display: flex;
+  margin-top: 40px;
+  margin-left: 15px;
+  margin-right: 15px;
+  justify-content: space-between;
+}

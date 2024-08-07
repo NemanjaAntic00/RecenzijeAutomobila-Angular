@@ -1,0 +1,140 @@
+.about-us-container {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 900px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-section {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.hero-section button {
+  display: inline-block;
+  width: 15%;
+  padding: 15px; /* Povećana unutrašnja margina */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2em; /* Povećana veličina fonta */
+  cursor: pointer;
+  margin-top: 20px; /* Povećana gornja margina */
+}
+
+.hero-section h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.hero-section h1:hover {
+  color: #0056b3;
+}
+
+.hero-section p {
+  font-size: 1.2em;
+  color: #6c757d;
+}
+
+.about-us-content {
+  margin-top: 40px;
+}
+
+.about-us-content h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #007bff;
+  position: relative;
+}
+
+.about-us-content h2::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: #007bff;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s;
+}
+
+.about-us-content h2:hover::after {
+  width: 100%;
+}
+
+.about-us-content p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-us-content a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.about-us-content a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.mission,
+.team,
+.contact {
+  margin-bottom: 40px;
+}
+
+.content-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.content-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.team-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-info h3 {
+  margin: 0;
+  font-size: 1.4em;
+  color: #333;
+}
+
+.team-info p {
+  margin: 5px 0 0;
+  color: #6c757d;
+}

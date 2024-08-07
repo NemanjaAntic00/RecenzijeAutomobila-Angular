@@ -1,0 +1,101 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Zatamnjivanje pozadine */
+  z-index: 10; /* Veća vrednost z-indexa od forme */
+}
+
+.review-form-container {
+  font-family: "Roboto", sans-serif;
+  background-color: #ffffff; /* Bela pozadina za svež izgled */
+  border-radius: 12px; /* Veći zaobljeni uglovi */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Više izražen shadow */
+  max-width: 600px; /* Malo uža forma */
+  padding: 40px; /* Povećana unutrašnja margina */
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20; /* Veća vrednost z-indexa da bi forma bila iznad overlay-a */
+}
+
+.header {
+  text-align: center;
+  color: #2c3e50; /* Tamnija boja za kontrast */
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.instructions {
+  font-size: 1.1em; /* Povećana veličina fonta */
+  color: #34495e; /* Neutralna tamna boja */
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600; /* Jači naglasak na tekstu */
+  color: #2c3e50; /* Tamnija boja */
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px; /* Povećana unutrašnja margina */
+  font-size: 1.1em;
+  border: 1px solid #bdc3c7; /* Svetlija boja granice */
+  border-radius: 6px; /* Veći zaobljeni uglovi */
+  box-sizing: border-box;
+}
+
+.form-group input[type="file"] {
+  border: none;
+}
+
+.form-group .rating {
+  display: flex;
+  align-items: center;
+}
+
+.form-group .star {
+  font-size: 2.5em;
+  cursor: pointer;
+  color: #e0e0e0; /* Svetlije zvezdice */
+}
+
+.form-group .star.filled {
+  color: #f39c12; /* Narandžasta boja za punu zvezdicu */
+}
+
+button {
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  background-color: #3498db; /* Svetlija plava boja */
+  color: white;
+  border: none;
+  border-radius: 6px; /* Veći zaobljeni uglovi */
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease; /* Animacija promena boje */
+}
+
+button:hover {
+  background-color: #2980b9; /* Tamnija plava na hover */
+}
+
+button:disabled {
+  background-color: #bdc3c7; /* Svetlija siva */
+  cursor: not-allowed;
+}

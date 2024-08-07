@@ -1,0 +1,9 @@
+<div @slideUp class="predlog-automobil" (click)="prikaziFormu()">
+  <img src="{{ slika }}" alt="Predloženi automobil" />
+  <div class="detalji">
+    <h3>{{ model }}</h3>
+    <p>{{ cena }}</p>
+    <p>{{ godiste }}</p>
+    <button (click)="prikaziFormu()">Detalji</button>
+  </div>
+</div>

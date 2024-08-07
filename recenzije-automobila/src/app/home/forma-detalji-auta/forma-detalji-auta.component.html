@@ -1,0 +1,23 @@
+<div class="modal-content">
+  <span class="close" (click)="closeModal()">&times;</span>
+  <h2 class="modal-title">Karakteristike automobila</h2>
+  <img src="{{ auto.slika }}" alt="Slika automobila" class="car-image" />
+  <form>
+    <div class="form-group">
+      <label for="marka">{{ auto.model }}</label>
+    </div>
+    <div class="form-group">
+      <label for="godiste">{{ auto.godiste }}</label>
+    </div>
+
+    <div class="form-group">
+      <label for="cena">{{ auto.cena }}</label>
+    </div>
+
+    <div class="form-group">
+      <label for="kilometraza">Kilometraza: {{ auto.kilometraza }}</label>
+    </div>
+
+    <button (click)="closeModal()" class="btn">U redu!</button>
+  </form>
+</div>

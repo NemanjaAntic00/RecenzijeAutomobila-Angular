@@ -1,0 +1,63 @@
+.sort-options {
+  width: 80.2vw;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f4f4f418;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+.sort-options:hover {
+  background-color: #eaeaea;
+}
+
+.sort-label {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.sort-select-container {
+  position: relative;
+  width: 100%;
+}
+
+.sort-select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 1em;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  appearance: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sort-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.sort-select::-ms-expand {
+  display: none;
+}
+
+.sort-select-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #007bff;
+  transform: translateY(-50%);
+}

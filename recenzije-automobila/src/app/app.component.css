@@ -1,0 +1,154 @@
+/*body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+nav {
+  background-color: #1e3a8a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 80px; 
+  margin-bottom: 10px;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  height: 50px; 
+  width: auto; 
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex: 1; 
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: block;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+nav ul li a:hover {
+  color: #ffce00;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+nav ul li a.active {
+  color: #ffce00; 
+  font-weight: bold;  
+}
+
+nav ul li a.active::before {
+  visibility: visible;
+  transform: scaleX(1);
+}*/
+
+/* Ako želiš da koristiš različite težine fonta za različite elemente */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700; /* Bold za naslove */
+}
+
+p,
+span,
+a {
+  font-weight: 400; /* Normalni težina za paragraf i linkove */
+}
+
+.modal {
+  display: block; /* Prikaz modala kada je otvoren */
+  position: fixed; /* Ostaje na istom mestu */
+  z-index: 4; /* Prikazuje se iznad svih drugih elemenata */
+  left: 0;
+  top: 0;
+  width: 100%; /* Puna širina */
+  height: 100%; /* Puna visina */
+  overflow: auto; /* Omogućava skrolovanje */
+  background-color: rgb(0, 0, 0); /* Crna pozadina sa providnošću */
+  background-color: rgba(0, 0, 0, 0.4); /* Providna pozadina */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% od vrha i centra */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Može se prilagoditi */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

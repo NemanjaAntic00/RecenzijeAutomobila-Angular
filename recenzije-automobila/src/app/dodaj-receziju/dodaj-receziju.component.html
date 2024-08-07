@@ -1,0 +1,75 @@
+<div class="overlay"></div>
+<div class="review-form-container">
+  <h1 class="header">Dodaj Recenziju</h1>
+  <p class="instructions">
+    Molimo vas da budete korektni, tačni i izbegavate uvredljiv sadržaj.
+    Recenzije koje ne ispunjavaju ove uslove neće biti objavljene.
+  </p>
+  <form (ngSubmit)="submitReview()" #reviewForm="ngForm">
+    <div class="form-group">
+      <label for="name">Model</label>
+      <input type="text" id="model" name="model" [(ngModel)]="model" required />
+    </div>
+    <div class="form-group">
+      <label for="godina">Godina</label>
+      <input
+        type="number"
+        id="godina"
+        name="godina"
+        [(ngModel)]="godina"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="cena">Cena</label>
+      <input type="number" id="cena" name="cena" [(ngModel)]="cena" required />
+    </div>
+    <div class="form-group">
+      <label for="kilometraza">Kilometraza</label>
+      <input
+        type="number"
+        id="kilometraza"
+        name="kilometraza"
+        [(ngModel)]="kilometraza"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="rating">Ocena</label>
+      <input
+        type="number"
+        id="rating"
+        name="rating"
+        [(ngModel)]="rating"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="comment">Komentar</label>
+      <textarea
+        type="text"
+        id="recenzija"
+        name="recenzija"
+        [(ngModel)]="recenzija"
+        required
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="images">Dodaj slike vozila (opciono)</label>
+      <input
+        type="file"
+        id="images"
+        name="images"
+        (change)="onFileSelected($event)"
+        multiple
+      />
+    </div>
+    <button
+      routerLink="/automobili"
+      type="submit"
+      [disabled]="!reviewForm.form.valid"
+    >
+      Pošalji Recenziju
+    </button>
+  </form>
+</div>

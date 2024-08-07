@@ -1,0 +1,15 @@
+<div @bounce class="sort-options">
+  <label for="sort" class="sort-label">Sortiraj po:</label>
+  <div class="sort-select-container">
+    <select
+      id="sort"
+      [(ngModel)]="sortOption"
+      (change)="onSortChange()"
+      class="sort-select"
+    >
+      <option value="">Izaberi</option>
+      <option value="price">Cena</option>
+      <option value="rating">Ocena</option>
+    </select>
+  </div>
+</div>

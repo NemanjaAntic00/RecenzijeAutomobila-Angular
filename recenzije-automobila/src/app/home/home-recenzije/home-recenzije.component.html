@@ -1,0 +1,8 @@
+<div class="Recenzije">
+  <app-home-recenzija
+    *ngFor="let recenzija of recenzije"
+    [model]="recenzija.model"
+    [recenzija]="recenzija.recenzija"
+    [slika]="recenzija.slika"
+  ></app-home-recenzija>
+</div>

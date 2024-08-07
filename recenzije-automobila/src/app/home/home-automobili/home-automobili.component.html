@@ -1,0 +1,11 @@
+<div class="predlozi">
+  <app-home-automobil
+    (prikaziFormuu)="prikaziFormu($event)"
+    *ngFor="let automobil of automobili"
+    [model]="automobil.model"
+    [cena]="automobil.cena"
+    [godiste]="automobil.model"
+    [slika]="automobil.slika"
+  >
+  </app-home-automobil>
+</div>

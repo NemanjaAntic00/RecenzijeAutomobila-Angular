@@ -1,0 +1,52 @@
+<aside @zoomIn class="filters">
+  <h2>Filteri</h2>
+  <div class="filter-group">
+    <label for="brand">Marka:</label>
+    <select id="brand" [(ngModel)]="filters.brand" (change)="applyFilters()">
+      <option value="">Sve</option>
+      <option value="Audi">Audi</option>
+      <option value="BMW">BMW</option>
+      <option value="Volkswagen">Volkswagen</option>
+    </select>
+  </div>
+  <div class="filter-group">
+    <label for="model">Model:</label>
+    <input
+      type="text"
+      id="model"
+      [(ngModel)]="filters.model"
+      (input)="applyFilters()"
+      placeholder="Unesite model"
+    />
+  </div>
+  <div class="filter-group">
+    <label for="year">Godina:</label>
+    <input
+      type="number"
+      id="year"
+      [(ngModel)]="filters.year"
+      (input)="applyFilters()"
+      placeholder="Unesite godinu"
+    />
+  </div>
+  <div class="filter-group">
+    <label for="price">Cena:</label>
+    <input
+      type="number"
+      id="price"
+      [(ngModel)]="filters.price"
+      (input)="applyFilters()"
+      placeholder="Max cena"
+    />
+  </div>
+  <div class="filter-group">
+    <label for="mileage">Kilometraža:</label>
+    <input
+      type="number"
+      id="mileage"
+      [(ngModel)]="filters.mileage"
+      (input)="applyFilters()"
+      placeholder="Max kilometraža"
+    />
+  </div>
+</aside>

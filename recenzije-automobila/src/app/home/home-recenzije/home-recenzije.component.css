@@ -1,0 +1,35 @@
+.Recenzije {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.recenzija {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: min-content;
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Google Sans Text", Roboto, Arial, sans-serif;
+  transition: background-color 0.3s, transform 0.2s;
+  max-width: 630px;
+  max-height: 200px;
+}
+.Levo {
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 16.5px;
+}
+.Levo > h3 {
+  font-size: 20px;
+  color: #073b8a;
+}
+.opis {
+  width: 400px;
+}
+.slika {
+  width: 200px;
+  height: 200px;
+}

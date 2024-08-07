@@ -1,0 +1,31 @@
+<div class="Container">
+  <app-navbar></app-navbar>
+  <div class="container">
+    <div>
+      <app-filteri
+        [filters]="filters"
+        (filtersChange)="applyFilters($event)"
+      ></app-filteri>
+      <button class="dodajR" (click)="DodajNovu()">Dodaj novu recenziju</button>
+      <app-forma-dodaj-sve
+        (posaljiRecenziju)="novaR($event)"
+        *ngIf="isFormaNova"
+      ></app-forma-dodaj-sve>
+    </div>
+
+    <div class="content">
+      <app-sortiraj
+        [sortOption]="sortOption"
+        (sortOptionChange)="changeSortOption($event)"
+      ></app-sortiraj>
+      <app-lista-automobila
+        (prikaziF)="prikaziFormu($event)"
+        [cars]="filteredCars"
+      ></app-lista-automobila>
+    </div>
+    <app-forma
+      (posaljiRecenziju)="posaljiRecenziju($event)"
+      *ngIf="isModalOpen"
+    ></app-forma>
+  </div>
+</div>

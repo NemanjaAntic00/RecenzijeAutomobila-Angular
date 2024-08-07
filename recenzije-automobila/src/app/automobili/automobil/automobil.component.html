@@ -1,0 +1,12 @@
+<div @rotate class="car-card">
+  <img [src]="car.image" alt="{{ car.name }}" />
+  <div class="car-details">
+    <h3>{{ car.name }}</h3>
+    <p>Godina: {{ car.year }}</p>
+    <p>Kilometraža: {{ car.mileage }} km</p>
+    <p>Cena: {{ car.price }} €</p>
+    <p>Ocena: {{ car.rating }}</p>
+    <p>Recenzija: {{ car.recension }}</p>
+  </div>
+  <button (click)="forma()">Dodaj recenziju</button>
+</div>

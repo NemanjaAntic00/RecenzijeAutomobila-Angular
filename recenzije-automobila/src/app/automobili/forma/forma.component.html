@@ -1,0 +1,59 @@
+<div @zoomIn class="overlay"></div>
+<div @zoomIn class="review-form-container">
+  <h1 class="header">Dodaj Recenziju</h1>
+  <p class="instructions">
+    Molimo vas da budete korektni, tačni i izbegavate uvredljiv sadržaj.
+    Recenzije koje ne ispunjavaju ove uslove neće biti objavljene.
+  </p>
+  <form (ngSubmit)="submitReview()" #reviewForm="ngForm">
+    <div class="form-group">
+      <label for="name">Ime</label>
+      <input type="text" id="name" name="name" ngModel required />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" ngModel required />
+    </div>
+    <div class="form-group">
+      <label for="rating">Ocena</label>
+      <div class="rating">
+        <ng-container *ngFor="let star of stars; let i = index">
+          <span
+            class="star"
+            [class.filled]="i < rating"
+            (click)="setRating(i + 1)"
+          >
+            &#9733;
+          </span>
+        </ng-container>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="comment">Komentar</label>
+      <textarea
+        type="text"
+        id="recenzija"
+        name="recenzija"
+        [(ngModel)]="recenzija"
+        required
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="images">Dodaj slike vozila (opciono)</label>
+      <input
+        type="file"
+        id="images"
+        name="images"
+        (change)="onFileSelected($event)"
+        multiple
+      />
+    </div>
+    <button
+      routerLink="/automobili"
+      type="submit"
+      [disabled]="!reviewForm.form.valid"
+    >
+      Pošalji Recenziju
+    </button>
+  </form>
+</div>
